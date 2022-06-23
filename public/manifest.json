@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "",
+  "name": "Notion SideBar",
+  "description": "When you open a Database item in Notion, it will appear in the sidebar.",
   "version": "1.0",
 
   "options_ui": {
