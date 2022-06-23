@@ -35,7 +35,5 @@
     "<all_urls>"
   ],
 
-	"content_security_policy": "script-src 'self'; object-src 'self'",
-
   "options_page": "options.html"
 }
