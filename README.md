@@ -1,5 +1,8 @@
 # notion_sidepanel README
 
+![AppVeyor](https://img.shields.io/appveyor/build/sahksas/notion_sidepanel)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/sahksas/notion_sidepanel)
+
 When you open a Database item in Notion, it will appear in the sidepanel.
 
 ## Screen shot
