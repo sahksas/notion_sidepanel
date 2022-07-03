@@ -1,71 +1,25 @@
-# Chrome Extension TypeScript Starter
+# notion_sidepanel README
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+When you open a Database item in Notion, it will appear in the sidepanel.
 
-Chrome Extension, TypeScript and Visual Studio Code
+## Screen shot
 
-## Prerequisites
+## Known Issues
 
-- [node + npm](https://nodejs.org/) (Current Version)
+## Release Notes
 
-## Option
+### 1.0.0
 
-- [Visual Studio Code](https://code.visualstudio.com/)
+2022/07/03
 
-## Includes the following
+- Initial release🎉
 
-- TypeScript
-- Webpack
-- React
-- Jest
-- Example Code
-  - Chrome Storage
-  - Options Version 2
-  - content script
-  - count up badge number
-  - background
+---
 
-## Project Structure
+### Additional request
 
-- src/typescript: TypeScript source files
-- src/assets: static files
-- dist: Chrome Extension directory
-- dist/js: Generated JavaScript files
+- [sahksas/nikanikaberry](https://github.com/sahksas/notion_sidepanel)
 
-## Setup
+If you have any bugs or requests, please send us a pull request directly or message us!
 
-```bash
-npm install
-```
-
-## Import as Visual Studio Code project
-
-...
-
-## Build
-
-```bash
-npm run build
-```
-
-## Build in watch mode
-
-### terminal
-
-```bash
-npm run watch
-```
-
-### Visual Studio Code
-
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
-## Test
-
-`npx jest` or `npm run test`
+---
