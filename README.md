@@ -21,7 +21,7 @@ When you open a Database item in Notion, it will appear in the sidepanel.
 
 ### Additional request
 
-- [sahksas/nikanikaberry](https://github.com/sahksas/notion_sidepanel)
+- [sahksas/notion_sidepanel](https://github.com/sahksas/notion_sidepanel)
 
 If you have any bugs or requests, please send us a pull request directly or message us!
 
