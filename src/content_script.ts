@@ -12,8 +12,8 @@ function domManipulation() {
     });
 }
 
-waitSelectorLoad(consts.OVERLAY_PARENT).then(() => {
-  const target = document.querySelector(consts.OVERLAY_PARENT)! as HTMLElement;
+waitSelectorLoad(consts.OVERLAY_PARENT_PATH).then(() => {
+  const target = document.querySelector(consts.OVERLAY_PARENT_PATH)! as HTMLElement;
   const observer = new MutationObserver((mutations) => {
     mutations.forEach(() => {
       const overlayInner = target.querySelector("div > div.notion-peek-renderer") as HTMLElement;
@@ -27,7 +27,7 @@ waitSelectorLoad(consts.OVERLAY_PARENT).then(() => {
   observer.observe(target, { childList: true, subtree: true });
 });
 
-waitSelectorLoad(consts.NOTION_FRAME).then(() => {
+waitSelectorLoad(consts.NOTION_FRAME_PATH).then(() => {
   const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
   notion_app.addEventListener("click", function (e) {
     const clickTarget = e.target as HTMLElement;

@@ -1,8 +1,8 @@
 export const NOTION_APP_PATH: string = "#notion-app";
-export const NOTION_FRAME: string =
+export const NOTION_FRAME_PATH: string =
   "#notion-app > div > div.notion-cursor-listener > div:nth-child(2) > div.notion-frame";
 
-export const OVERLAY_PARENT: string =
+export const OVERLAY_PARENT_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container";
 export const OVERLAY_PATH: string = "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container";
 export const OVERLAY_INNER_PATH: string =

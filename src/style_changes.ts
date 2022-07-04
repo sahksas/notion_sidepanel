@@ -24,7 +24,7 @@ export function styleChange() {
   const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
   notion_app.style.width = "60%";
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME) as HTMLElement;
+  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notion_frame.style.maxWidth = "60%";
 
   const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
@@ -46,7 +46,7 @@ export function undoStyleChange() {
   const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
   notion_app.style.width = "";
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME) as HTMLElement;
+  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notion_frame.style.maxWidth = "";
 
   const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
