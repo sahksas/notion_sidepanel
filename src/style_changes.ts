@@ -57,6 +57,10 @@ export function undoStyleChange() {
     closePanel.click();
   }
 
+  const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
+  overlay.style.zIndex = "999";
+  overlay.style.position = "fixed";
+
   const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
   notion_app.style.width = "";
 
