@@ -70,7 +70,7 @@ export function undoStyleChange() {
   sidebar.style.zIndex = "99";
 
   const helpButton = document.querySelector(consts.HELP_BUTTON_PATH) as HTMLElement;
-  helpButton.hidden = false;
+  helpButton.style.display = "flex";
 
   const closeButtonElm = document.getElementById("closeButton");
   if (closeButtonElm) {
