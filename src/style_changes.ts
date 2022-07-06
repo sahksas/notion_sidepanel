@@ -29,11 +29,11 @@ export function styleChange() {
   mainBody.style.zIndex = "100";
   mainBody.style.position = "";
 
-  const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
-  notion_app.style.width = "60%"; // <- ""
+  const notionApp = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
+  notionApp.style.width = "60%"; // <- ""
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
-  notion_frame.style.maxWidth = "60%"; // <- ""
+  const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
+  notionFrame.style.maxWidth = "60%"; // <- ""
 
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "1"; // <- "100"
@@ -61,11 +61,11 @@ export function undoStyleChange() {
   overlay.style.zIndex = "999";
   overlay.style.position = "fixed";
 
-  const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
-  notion_app.style.width = "";
+  const notionApp = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
+  notionApp.style.width = "";
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
-  notion_frame.style.maxWidth = "";
+  const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
+  notionFrame.style.maxWidth = "";
 
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "100";
