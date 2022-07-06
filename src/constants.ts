@@ -95,3 +95,8 @@ export const TRASH_BUTTON: string =
 
 export const CLOSE_PANEL_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div";
+
+export const MORE_PATH: string =
+  "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div.notion-topbar-more-button.notion-focusable";
+export const TRASH_PATH: string =
+  "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(2) > div > div > div > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(4)";

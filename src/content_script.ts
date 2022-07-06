@@ -1,6 +1,7 @@
 import { waitSelectorLoad } from "./utils";
 import * as consts from "./constants";
 import * as styleChanges from "./style_changes";
+import * as trash from "./trash";
 
 function domManipulation() {
   waitSelectorLoad(consts.OVERLAY_INNER_PATH)
@@ -34,6 +35,9 @@ waitSelectorLoad(consts.NOTION_FRAME_PATH).then(() => {
     // console.log(clickTarget);
     if (clickTarget?.id == "closeButton") {
       styleChanges.undoStyleChange();
+    }
+    if (clickTarget?.id == "trashButton") {
+      trash.itemTrash();
     }
   });
 });
