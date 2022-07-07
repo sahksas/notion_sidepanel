@@ -1,11 +1,10 @@
 export const NOTION_APP_PATH: string = "#notion-app";
 export const NOTION_FRAME_PATH: string =
   "#notion-app > div > div.notion-cursor-listener > div:nth-child(2) > div.notion-frame";
-export const MAIN_BODY_PATH: string =
-  "#notion-app > div.notion-app-inner.notion-light-theme > div.notion-cursor-listener";
+export const MAIN_BODY_PATH: string = "#notion-app > div.notion-app-inner > div.notion-cursor-listener";
 
 export const HEAD_BAR_PATH: string =
-  "#notion-app > div.notion-app-inner.notion-light-theme > div.notion-cursor-listener > div:nth-child(2) > div:nth-child(1)";
+  "#notion-app > div.notion-app-inner > div.notion-cursor-listener > div:nth-child(2) > div:nth-child(1)";
 
 export const SIDE_BAR_PATH: string =
   "#notion-app > div.notion-app-inner > div.notion-cursor-listener > div.notion-sidebar-container";
@@ -13,11 +12,11 @@ export const SIDE_BAR_PATH: string =
 export const OVERLAY_PARENT_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container";
 export const OVERLAY_PATH: string =
-  "#notion-app > div.notion-app-inner.notion-light-theme > div.notion-overlay-container.notion-default-overlay-container";
+  "#notion-app > div.notion-app-inner > div.notion-overlay-container.notion-default-overlay-container";
 export const OVERLAY_INNER_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2)";
 export const OVERLAY_BODY_PATH: string =
-  "#notion-app > div.notion-app-inner.notion-light-theme > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical";
+  "#notion-app > div.notion-app-inner > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical";
 
 export const OVERLAY_TITLE_LEFT_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(3) > div > div:nth-child(1) > div";
@@ -29,7 +28,7 @@ export const OVERLAY_PAGECONTENT_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(4) > div > div";
 
 export const HELP_BUTTON_PATH: string =
-  "#notion-app > div.notion-app-inner.notion-light-theme > div.notion-cursor-listener > div.notion-help-button.notion-focusable";
+  "#notion-app > div.notion-app-inner > div.notion-cursor-listener > div.notion-help-button.notion-focusable";
 
 export const CLOSE_BUTTON: string =
   '\
