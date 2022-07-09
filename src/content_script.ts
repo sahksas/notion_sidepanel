@@ -2,6 +2,16 @@ import { waitSelectorLoad } from "./utils";
 import * as consts from "./constants";
 import * as styleChanges from "./style_changes";
 
+function domManipulation() {
+  waitSelectorLoad(consts.OVERLAY_INNER_PATH)
+    .then(() => {
+      styleChanges.styleChange();
+    })
+    .catch(() => {
+      // console.log("err");
+    });
+}
+
 waitSelectorLoad(consts.OVERLAY_PARENT_PATH).then(() => {
   const target = document.querySelector(consts.OVERLAY_PARENT_PATH)! as HTMLElement;
   const observer = new MutationObserver((mutations) => {
@@ -9,7 +19,7 @@ waitSelectorLoad(consts.OVERLAY_PARENT_PATH).then(() => {
       const overlayInner = target.querySelector("div > div.notion-peek-renderer") as HTMLElement;
       if (overlayInner) {
         // Detects the display of the editing screen
-        styleChanges.styleChange();
+        domManipulation();
       } else {
         // Detects the hiding of the editing screen
         styleChanges.undoStyleChange();
