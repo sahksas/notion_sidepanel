@@ -18,8 +18,10 @@ waitSelectorLoad(consts.OVERLAY_PARENT_PATH).then(() => {
     mutations.forEach(() => {
       const overlayInner = target.querySelector("div > div.notion-peek-renderer") as HTMLElement;
       if (overlayInner) {
+        // Detects the display of the editing screen
         domManipulation();
       } else {
+        // Detects the hiding of the editing screen
         styleChanges.undoStyleChange();
       }
     });
@@ -28,10 +30,9 @@ waitSelectorLoad(consts.OVERLAY_PARENT_PATH).then(() => {
 });
 
 waitSelectorLoad(consts.NOTION_FRAME_PATH).then(() => {
-  const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
-  notion_app.addEventListener("click", function (e) {
+  const notionApp = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
+  notionApp.addEventListener("click", function (e) {
     const clickTarget = e.target as HTMLElement;
-    // console.log(clickTarget);
     if (clickTarget?.id == "closeButton") {
       styleChanges.undoStyleChange();
     }

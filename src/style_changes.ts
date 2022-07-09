@@ -1,6 +1,15 @@
 import * as consts from "./constants";
 
 export function styleChange() {
+  /**
+   * Change the style of the notion screen.
+   * The main changes are as follows
+   * - Change the width of the edit screen
+   * - Change the height of the edit screen
+   * - Change the display position of the edit screen
+   * - Change the padding of the edit screen
+   * - Adjustment of z-index of each element
+   */
   const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
   overlay.style.zIndex = "100"; // <- "999"
   overlay.style.position = ""; // <- "fixed"
@@ -29,11 +38,11 @@ export function styleChange() {
   mainBody.style.zIndex = "100";
   mainBody.style.position = "";
 
-  const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
-  notion_app.style.width = "60%"; // <- ""
+  const notionApp = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
+  notionApp.style.width = "60%"; // <- ""
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
-  notion_frame.style.maxWidth = "60%"; // <- ""
+  const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
+  notionFrame.style.maxWidth = "60%"; // <- ""
 
   const notionPageContent = document.querySelector(consts.NOTION_PAGE_CONTENT_PATH) as HTMLElement;
   const children = Array.from(notionPageContent.children) as HTMLElement[];
@@ -58,6 +67,9 @@ export function styleChange() {
 }
 
 export function undoStyleChange() {
+  /**
+   * Revert changes made with `styleChange`.
+   */
   const overlayBody = document.querySelector(consts.OVERLAY_BODY_PATH) as HTMLElement;
   const closePanel = document.querySelector(consts.CLOSE_PANEL_PATH) as HTMLElement;
   if (overlayBody) {
@@ -68,11 +80,11 @@ export function undoStyleChange() {
   overlay.style.zIndex = "999";
   overlay.style.position = "fixed";
 
-  const notion_app = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
-  notion_app.style.width = "";
+  const notionApp = document.querySelector(consts.NOTION_APP_PATH) as HTMLElement;
+  notionApp.style.width = "";
 
-  const notion_frame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
-  notion_frame.style.maxWidth = "";
+  const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
+  notionFrame.style.maxWidth = "";
 
   const notionPageContent = document.querySelector(consts.NOTION_PAGE_CONTENT_PATH) as HTMLElement;
   const children = Array.from(notionPageContent.children) as HTMLElement[];
