@@ -1,0 +1,43 @@
+name: Enhancement
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: ⬆️ Enhancement Overview
+      description: Please tell us what features you have enhancement.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: ✔️ Background of the enhancements
+      description: Why did you make the enhancements?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🤔 How the enhancement was implemented
+      description: By what means did you implementmented the enhancement?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Below are the options. Please fill them out if you would like.
+  - type: textarea
+    attributes:
+      label: 📂 Details of Changes
+      description: Please include a brief description of each file you have made changes to.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: 🐙 Related Issues
+      description: Enter the relevant issue in github with "#number".
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: 💬 Others
+    validations:
+      required: false
