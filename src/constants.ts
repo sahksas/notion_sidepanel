@@ -2,6 +2,8 @@ export const NOTION_APP_PATH: string = "#notion-app";
 export const NOTION_FRAME_PATH: string =
   "#notion-app > div > div.notion-cursor-listener > div:nth-child(2) > div.notion-frame";
 export const MAIN_BODY_PATH: string = "#notion-app > div.notion-app-inner > div.notion-cursor-listener";
+export const NOTION_PAGE_CONTENT_PATH: string =
+  "#notion-app > div > div.notion-cursor-listener > div:nth-child(2) > div.notion-frame > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(4) > div:nth-child(1) > div";
 
 export const HEAD_BAR_PATH: string =
   "#notion-app > div.notion-app-inner > div.notion-cursor-listener > div:nth-child(2) > div:nth-child(1)";

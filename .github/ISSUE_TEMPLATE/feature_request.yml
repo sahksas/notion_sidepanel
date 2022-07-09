@@ -10,9 +10,8 @@ body:
   - type: textarea
     id: main
     attributes:
-      label: Request
+      label: ⭐ Request
       description: What additional or enhanced features would you like to see?
-      placeholder: Please describe clearly and concisely.
     validations:
       required: true
   - type: markdown
@@ -22,8 +21,7 @@ body:
   - type: textarea
     id: background
     attributes:
-      label: Request Background
+      label: 💘 Request Background
       description: What background did you feel necessitated the above?
-      placeholder: Please describe clearly and concisely.
     validations:
       required: false
