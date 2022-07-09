@@ -1,3 +1,5 @@
+import * as consts from "./constants";
+
 export const waitSelectorLoad = (selector: string, delay = 500, maxCheck = 15) =>
   new Promise((resolve, reject) => {
     let checkCount = 0;
@@ -36,4 +38,12 @@ export const waitClassNameLoad = (className: string, delay = 500, maxCheck = 15)
       }
     };
     elmCheck();
+  });
+
+export const getDataBlockId = () =>
+  new Promise((resolve) => {
+    waitSelectorLoad(consts.OVERLAY_TITLE_PATH).then(() => {
+      const overlayTitle = document.querySelector(consts.OVERLAY_TITLE_PATH) as HTMLElement;
+      resolve(overlayTitle.getAttribute("data-block-id"));
+    });
   });
