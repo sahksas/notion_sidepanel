@@ -44,6 +44,13 @@ export function styleChange() {
   const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notionFrame.style.maxWidth = "60%"; // <- ""
 
+  const notionPageContent = document.querySelector(consts.NOTION_PAGE_CONTENT_PATH) as HTMLElement;
+  const children = Array.from(notionPageContent.children) as HTMLElement[];
+  for (const child of children) {
+    child.style.width = "calc(60vw - 10px)"; // <- "calc(100vw - 10px)"
+    child.style.maxWidth = "calc(60vw - 10px)"; // <- "calc(100vw - 10px)"
+  }
+
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "1"; // <- "100"
 
@@ -78,6 +85,13 @@ export function undoStyleChange() {
 
   const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notionFrame.style.maxWidth = "";
+
+  const notionPageContent = document.querySelector(consts.NOTION_PAGE_CONTENT_PATH) as HTMLElement;
+  const children = Array.from(notionPageContent.children) as HTMLElement[];
+  for (const child of children) {
+    child.style.width = "calc(100vw - 10px)";
+    child.style.maxWidth = "calc(100vw - 10px)";
+  }
 
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "100";
