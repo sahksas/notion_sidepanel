@@ -1,6 +1,15 @@
 import * as consts from "./constants";
 
 export function styleChange() {
+  /**
+   * Change the style of the notion screen.
+   * The main changes are as follows
+   * - Change the width of the edit screen
+   * - Change the height of the edit screen
+   * - Change the display position of the edit screen
+   * - Change the padding of the edit screen
+   * - Adjustment of z-index of each element
+   */
   const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
   overlay.style.zIndex = "100"; // <- "999"
   overlay.style.position = ""; // <- "fixed"
@@ -51,6 +60,9 @@ export function styleChange() {
 }
 
 export function undoStyleChange() {
+  /**
+   * Revert changes made with `styleChange`.
+   */
   const overlayBody = document.querySelector(consts.OVERLAY_BODY_PATH) as HTMLElement;
   const closePanel = document.querySelector(consts.CLOSE_PANEL_PATH) as HTMLElement;
   if (overlayBody) {
