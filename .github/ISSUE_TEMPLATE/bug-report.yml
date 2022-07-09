@@ -8,11 +8,9 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: main
     attributes:
-      label: Overview
+      label: ⭐ Overview
       description: A description of what the bug is
-      placeholder: Tell us what you see!
     validations:
       required: true
   - type: markdown
@@ -20,9 +18,8 @@ body:
       value: |
         Below are the options. Please fill them out if you would like.
   - type: textarea
-    id: reproduction
     attributes:
-      label: Reproduction procedures
+      label: 🪜 Reproduction procedures
       description: Steps to reproduce the behavior
       value: |
         1.
@@ -31,16 +28,14 @@ body:
     validations:
       required: false
   - type: textarea
-    id: expected-behavior
     attributes:
-      label: Expected behavior
+      label: ❗ Expected behavior
       description: A description of what you expected to happen
     validations:
       required: false
   - type: dropdown
-    id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: 🧭 What browsers are you seeing the problem on?
       multiple: true
       options:
         - Chrome
@@ -48,12 +43,11 @@ body:
         - Safari
         - Microsoft Edge
   - type: textarea
-    id: logs
     attributes:
-      label: Relevant log output
+      label: 📝 Relevant log output
       description: Copy and paste the relevant log output.
       render: shell
   - type: textarea
     id: other
     attributes:
-      label: Other
+      label: 💬 Other
