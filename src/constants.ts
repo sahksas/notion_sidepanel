@@ -20,6 +20,8 @@ export const OVERLAY_INNER_PATH: string =
 export const OVERLAY_BODY_PATH: string =
   "#notion-app > div.notion-app-inner > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical";
 
+export const OVERLAY_TITLE_PATH: string =
+  "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(3) > div > div:nth-child(1) > div > div:nth-child(2) > div > div.notion-selectable.notion-page-block";
 export const OVERLAY_TITLE_LEFT_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div.notion-scroller.vertical > div.whenContentEditable > div:nth-child(3) > div > div:nth-child(1) > div";
 export const OVERLAY_TITLE_RIGHT_PATH: string =
