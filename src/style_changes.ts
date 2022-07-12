@@ -73,8 +73,10 @@ export function styleChange() {
     block.style.border = "";
   }
   getDataBlockId().then((dataBlockId) => {
-    const targetBlock = mainBody.querySelector(`[data-block-id="${dataBlockId}"]`) as HTMLElement;
-    targetBlock.style.border = "0.2rem solid red";
+    const targetBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id="${dataBlockId}"]`);
+    for (const targetBlock of targetBlocks) {
+      targetBlock.style.border = "0.2rem solid red";
+    }
   });
 }
 
