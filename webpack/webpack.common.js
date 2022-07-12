@@ -23,6 +23,23 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {},
+          },
+        ],
+        exclude: /node_modules/,
+      },
     ],
   },
   resolve: {
