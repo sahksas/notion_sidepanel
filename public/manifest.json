@@ -3,7 +3,7 @@
 
   "name": "Notion SidePanel",
   "description": "When you open a Database item in Notion, it will appear in the sidepanel.",
-  "version": "1.2.0",
+  "version": "1.2.1",
 
   "options_ui": {
     "page": "options.html"
