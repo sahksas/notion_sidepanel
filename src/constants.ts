@@ -65,5 +65,41 @@ export const CLOSE_BUTTON: string =
     </div>\
   ';
 
+export const TRASH_BUTTON: string =
+  '\
+        <div \
+          id="trashButton" \
+          role="button" \
+          tabindex="0" \
+          style="\
+            user-select: none;\
+            transition: opacity 700ms ease 0s, color 700ms ease 0s, transform 200ms ease 0s;\
+            cursor: pointer;\
+            opacity: 1;\
+            position: absolute;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            background: white;\
+            bottom: 75px;\
+            right: 26px;\
+            width: 36px;\
+            height: 36px;\
+            border-radius: 100%;\
+            font-size: 15px;\
+            box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;\
+            z-index: 1;\
+            transform: translateX(0px) translateZ(0px);\
+          "\
+        >\
+          🗑️\
+        </div>\
+      ';
+
 export const CLOSE_PANEL_PATH: string =
   "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div";
+
+export const MORE_PATH: string =
+  "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div.notion-topbar-more-button.notion-focusable";
+export const TRASH_PATH: string =
+  "#notion-app > div > div.notion-overlay-container.notion-default-overlay-container > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(2) > div > div > div > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(4)";
