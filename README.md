@@ -3,6 +3,8 @@
 ![version](https://img.shields.io/chrome-web-store/v/aiplpnkcpmheennhbmojmmalmigjkheh)
 ![users](https://img.shields.io/chrome-web-store/users/aiplpnkcpmheennhbmojmmalmigjkheh)
 
+[Chrome Web Store](https://chrome.google.com/webstore/detail/notion-sidepanel/aiplpnkcpmheennhbmojmmalmigjkheh?hl=ja&authuser=0)
+
 When you open a Database item in Notion, it will appear in the sidepanel.
 
 ## Screen shot
