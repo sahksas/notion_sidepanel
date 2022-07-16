@@ -13,13 +13,18 @@ When you open a Database item in Notion, it will appear in the sidepanel.
 
 ## Known Issues
 
+- Styles may be broken when opening inline databases.
+
 ## Release Notes
 
-### 1.0.0
+### 1.2.0
 
-2022/07/03
+2022/07/16
 
-- Initial release🎉
+- Fixed a bug when opening items in the inline database([sahksas/notion_sidepanel#9](https://github.com/sahksas/notion_sidepanel/issues/9), [sahksas/notion_sidepanel#13](https://github.com/sahksas/notion_sidepanel/pull/13))
+- Implemented a function to highlight the currently open item in the database with a border line([sahksas/notion_sidepanel#12](https://github.com/sahksas/notion_sidepanel/pull/12))
+- Added options page to change various settings([sahksas/notion_sidepanel#16](https://github.com/sahksas/notion_sidepanel/pull/16)
+- Close button design changed
 
 ### 1.1.0
 
@@ -29,6 +34,12 @@ When you open a Database item in Notion, it will appear in the sidepanel.
 - Fixed a bug when opening images in the side panel([sahksas/notion_sidepanel#3](https://github.com/sahksas/notion_sidepanel/issues/3))
 - Fixed some elements in the side panel that were hidden([sahksas/notion_sidepanel#6](https://github.com/sahksas/notion_sidepanel/issues/6))
 - Removed unused node modules
+
+### 1.0.0
+
+2022/07/03
+
+- Initial release🎉
 
 ---
 
