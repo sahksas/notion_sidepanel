@@ -1,6 +1,16 @@
+import { getDataBlockId } from "./utils";
 import * as consts from "./constants";
 
 export function styleChange() {
+  /**
+   * Change the style of the notion screen.
+   * The main changes are as follows
+   * - Change the width of the edit screen
+   * - Change the height of the edit screen
+   * - Change the display position of the edit screen
+   * - Change the padding of the edit screen
+   * - Adjustment of z-index of each element
+   */
   const overlay = document.querySelector(consts.OVERLAY_PATH) as HTMLElement;
   overlay.style.zIndex = "100"; // <- "999"
   overlay.style.position = ""; // <- "fixed"
@@ -35,6 +45,15 @@ export function styleChange() {
   const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notionFrame.style.maxWidth = "60%"; // <- ""
 
+  const notionPageContent = document.querySelector(consts.NOTION_PAGE_CONTENT_PATH) as HTMLElement;
+  if (notionPageContent) {
+    const children = Array.from(notionPageContent.children) as HTMLElement[];
+    for (const child of children) {
+      child.style.width = "calc(60vw - 10px)"; // <- "calc(100vw - 10px)"
+      child.style.maxWidth = "calc(60vw - 10px)"; // <- "calc(100vw - 10px)"
+    }
+  }
+
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "1"; // <- "100"
 
@@ -53,9 +72,38 @@ export function styleChange() {
   if (!closeButtonElm) {
     helpButton.insertAdjacentHTML("beforebegin", consts.CLOSE_BUTTON);
   }
+
+  chrome.storage.local.get("highlight").then((items) => {
+    if (items.highlight) {
+      const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
+      for (const block of allBlocks) {
+        block.style.border = "";
+      }
+      getDataBlockId().then((dataBlockId) => {
+        const targetBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id="${dataBlockId}"]`);
+        for (const targetBlock of targetBlocks) {
+          targetBlock.style.border = "0.2rem solid red";
+        }
+      });
+    }
+  });
 }
 
 export function undoStyleChange() {
+  /**
+   * Revert changes made with `styleChange`.
+   */
+
+  chrome.storage.local.get("highlight").then((items) => {
+    if (items.highlight) {
+      const mainBody = document.querySelector(consts.MAIN_BODY_PATH) as HTMLElement;
+      const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
+      for (const block of allBlocks) {
+        block.style.border = "";
+      }
+    }
+  });
+
   const overlayBody = document.querySelector(consts.OVERLAY_BODY_PATH) as HTMLElement;
   const closePanel = document.querySelector(consts.CLOSE_PANEL_PATH) as HTMLElement;
   if (overlayBody) {
@@ -71,6 +119,8 @@ export function undoStyleChange() {
 
   const notionFrame = document.querySelector(consts.NOTION_FRAME_PATH) as HTMLElement;
   notionFrame.style.maxWidth = "";
+
+  window.resizeBy(screen.width, screen.height);
 
   const headbar = document.querySelector(consts.HEAD_BAR_PATH) as HTMLElement;
   headbar.style.zIndex = "100";

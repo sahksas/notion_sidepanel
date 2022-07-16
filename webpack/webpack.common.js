@@ -5,6 +5,7 @@ const srcDir = path.join(__dirname, "..", "src");
 module.exports = {
   entry: {
     content_script: path.join(srcDir, "content_script.ts"),
+    options: path.join(srcDir, "options.tsx"),
   },
   output: {
     path: path.join(__dirname, "../dist/js"),
@@ -21,6 +22,23 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.scss/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {},
+          },
+        ],
         exclude: /node_modules/,
       },
     ],
