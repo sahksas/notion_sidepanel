@@ -1,5 +1,8 @@
 # notion_sidepanel README
 
+![version](https://img.shields.io/chrome-web-store/v/aiplpnkcpmheennhbmojmmalmigjkheh)
+![users](https://img.shields.io/chrome-web-store/users/aiplpnkcpmheennhbmojmmalmigjkheh)
+
 When you open a Database item in Notion, it will appear in the sidepanel.
 
 ## Screen shot
