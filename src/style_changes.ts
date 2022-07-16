@@ -68,14 +68,18 @@ export function styleChange() {
     helpButton.insertAdjacentHTML("beforebegin", consts.CLOSE_BUTTON);
   }
 
-  const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
-  for (const block of allBlocks) {
-    block.style.border = "";
-  }
-  getDataBlockId().then((dataBlockId) => {
-    const targetBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id="${dataBlockId}"]`);
-    for (const targetBlock of targetBlocks) {
-      targetBlock.style.border = "0.2rem solid red";
+  chrome.storage.local.get("highlight").then((items) => {
+    if (items.highlight) {
+      const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
+      for (const block of allBlocks) {
+        block.style.border = "";
+      }
+      getDataBlockId().then((dataBlockId) => {
+        const targetBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id="${dataBlockId}"]`);
+        for (const targetBlock of targetBlocks) {
+          targetBlock.style.border = "0.2rem solid red";
+        }
+      });
     }
   });
 }
@@ -85,11 +89,15 @@ export function undoStyleChange() {
    * Revert changes made with `styleChange`.
    */
 
-  const mainBody = document.querySelector(consts.MAIN_BODY_PATH) as HTMLElement;
-  const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
-  for (const block of allBlocks) {
-    block.style.border = "";
-  }
+  chrome.storage.local.get("highlight").then((items) => {
+    if (items.highlight) {
+      const mainBody = document.querySelector(consts.MAIN_BODY_PATH) as HTMLElement;
+      const allBlocks = mainBody.querySelectorAll<HTMLElement>(`[data-block-id]`);
+      for (const block of allBlocks) {
+        block.style.border = "";
+      }
+    }
+  });
 
   const overlayBody = document.querySelector(consts.OVERLAY_BODY_PATH) as HTMLElement;
   const closePanel = document.querySelector(consts.CLOSE_PANEL_PATH) as HTMLElement;
