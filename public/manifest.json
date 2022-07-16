@@ -5,6 +5,10 @@
   "description": "When you open a Database item in Notion, it will appear in the sidepanel.",
   "version": "1.1.0",
 
+  "options_ui": {
+    "page": "options.html"
+  },
+
   "action": {
     "default_icon": {
       "16": "16.png",
@@ -22,5 +26,5 @@
     }
   ],
 
-  "permissions": []
+  "permissions": ["storage"]
 }
