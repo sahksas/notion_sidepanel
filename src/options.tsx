@@ -4,15 +4,18 @@ import "./styles/options.scss";
 
 const Options = () => {
   const [highlightFlg, setHighlight] = useState<boolean>(false);
+  const [dustBoxFlg, setBustBox] = useState<boolean>(false);
   const [status, setStatus] = useState<string>("");
 
   useEffect(() => {
     chrome.storage.local.get(
       {
         highlight: true,
+        dustBox: false,
       },
       (items) => {
         setHighlight(items.highlight);
+        setBustBox(items.dustBox);
       }
     );
   }, []);
@@ -34,6 +37,19 @@ const Options = () => {
 
   return (
     <>
+      <div className="field">
+        <div className="labelText"></div>
+        <div className="switch">
+          <input
+            id="toggle"
+            className="toggleInput"
+            type="checkbox"
+            checked={dustBoxFlg}
+            onChange={(event) => setBustBox(event.target.checked)}
+          />
+          <label htmlFor="toggle" className="toggleLabel" />
+        </div>
+      </div>
       <div className="field">
         <div className="labelText">Highlight open items in the side panel</div>
         <div className="switch">

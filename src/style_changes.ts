@@ -63,6 +63,11 @@ export function styleChange() {
   const helpButton = document.querySelector(consts.HELP_BUTTON_PATH) as HTMLElement;
   helpButton.style.display = "none"; // <- "flex"
 
+  const trashButtonElm = document.getElementById("trashButton");
+  if (!trashButtonElm) {
+    helpButton.insertAdjacentHTML("beforebegin", consts.TRASH_BUTTON);
+  }
+
   const closeButtonElm = document.getElementById("closeButton");
   if (!closeButtonElm) {
     helpButton.insertAdjacentHTML("beforebegin", consts.CLOSE_BUTTON);
@@ -125,6 +130,11 @@ export function undoStyleChange() {
 
   const helpButton = document.querySelector(consts.HELP_BUTTON_PATH) as HTMLElement;
   helpButton.style.display = "flex";
+
+  const trashButtonElm = document.getElementById("trashButton");
+  if (trashButtonElm) {
+    trashButtonElm.remove();
+  }
 
   const closeButtonElm = document.getElementById("closeButton");
   if (closeButtonElm) {
